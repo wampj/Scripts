@@ -1,0 +1,28 @@
+@echo off
+echo Testing for Admin Access
+net sessions
+if %errorlevel%==0 (
+echo Success!
+) else (
+echo No admin
+pause
+exit
+)
+
+echo WARNING - THIS SCRIPT IS MEANT FOR USE BY MAXWELL KIERNAN AND THE WAMPJ TEAM ONLY - WARNING
+echo WARNING - ANY MISUSE OF THIS SCRPT WILL CAUSE AN IMMEDIATE DISQUALIFICATION OF YOU AND YOUR TEAM - WARNING
+echo Thank You For Complying
+pause
+echo Welcome Master Maxwell
+pause
+echo The Script Will Now Start...
+pause
+echo Turning On Windows Automatic Updates
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update" /v AUOptions /t REG_DWORD /d 1 /f
+echo Configuring Password Policy
+net accounts /minpwlen:10
+net accounts /maxpwage:30
+net accounts /minpwage:5
+echo Removing Remote Desktop Access
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 1 /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v UserAuthentication /t REG_DWORD /d 0 /f
