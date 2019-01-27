@@ -1,0 +1,12 @@
+echo Windows 10 Checklist
+echo
+echo 1. Complete Forensics Questions
+echo 2. Run Script
+echo 2a. CHANGE ADMIN ACC's PASSWORD IMMEDIATLY AFTER RUNNING SCRIPT TO AVOID GETTING LOCKED OUT
+echo 3. Go Through Users List
+echo 4. Change Any Insecure Passwords On Admins
+echo 5. Set Up Account Lockout Policy
+echo 6. Go through "Programs and Features" Looking For Malicious Programs
+echo 7. Update Authorized Programs (ie. Firefox, Adobe Acrobat, etc.)
+echo 8. Complete Any Tasks From The Readme (ie. Making New User Group, Installing Software, etc.)
+echo 9. Check That Everything The Script *theoretically* Did, Was Actually Done
