@@ -204,6 +204,8 @@ powercfg -SETDCVALUEINDEX SCHEME_MAX SUB_NONE CONSOLELOCK 1
 powercfg -SETDCVALUEINDEX SCHEME_MIN SUB_NONE CONSOLELOCK 1
 echo Disabling The Guest Account
 net user Guest /active:no && (
+echo Disabling The Requiring of Control, Alt, Delete On Login
+reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "DisableCAD" /t REG_DWORD /d 0 /f
 echo -------------------------------------------------------
 echo The
 echo Script
